@@ -7,11 +7,15 @@ import cv2 as cv
 
 from tools.eval.datasets import DATASETS
 
-if "PYTHONPATH" in os.environ:
-    root_dir = os.environ["PYTHONPATH"]
-else:
-    root_dir = os.path.join("..", "..")
+# if "PYTHONPATH" in os.environ:
+#     root_dir = os.environ["PYTHONPATH"]
+# else:
+#     root_dir = os.path.join("..", "..")
+# sys.path.append(root_dir)
+root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.append(root_dir)
+print(f"Using root_dir: {root_dir}")
+
 from models import MODELS
 
 parser = argparse.ArgumentParser("Evaluation with OpenCV on different models in the zoo.")
