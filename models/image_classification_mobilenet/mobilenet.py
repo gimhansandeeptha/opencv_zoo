@@ -8,6 +8,8 @@ class MobileNet:
 
     def __init__(self, modelPath, topK=1, loadLabel=True, backendId=0, targetId=0):
         self.model_path = modelPath
+        print("+++++++++++++++++")
+        print(modelPath)
         assert topK >= 1
         self.top_k = topK
         self.load_label = loadLabel
