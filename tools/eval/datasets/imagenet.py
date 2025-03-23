@@ -12,7 +12,7 @@ class ImageNet:
         self.top1_acc = -1
         self.top5_acc = -1
 
-        self.root_val = os.path.join(self.root, "ILSVRC", "Data", "CLS-LOC", "val")
+        self.root_val = os.path.join(self.root, "imagenet-val", "val")
         self.val_label_file = os.path.join(self.root, "caffe_ilsvrc12", "val.txt")
 
         self.val_label = self.load_label(self.val_label_file)
