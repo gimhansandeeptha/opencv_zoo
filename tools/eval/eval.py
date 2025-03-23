@@ -5,7 +5,7 @@ import argparse
 import numpy as np
 import cv2 as cv
 
-from datasets import DATASETS
+from tools.eval.datasets import DATASETS
 
 if "PYTHONPATH" in os.environ:
     root_dir = os.environ["PYTHONPATH"]
